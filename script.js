@@ -347,13 +347,6 @@ btnClose.addEventListener('click', function (e) {
   inputCloseUsername.value = inputClosePin.value = '';
 });
 
-let sorted = false;
-btnSort.addEventListener('click', function (e) {
-  e.preventDefault();
-  displayMovements(currentAccount.movements, !sorted);
-  sorted = !sorted;
-});
-
 labelBalance.addEventListener('click', function (e) {
   [...document.querySelectorAll('.movements__row')].forEach(function (row, i) {
     if (i % 2 === 0) row.style.backgroundColor = 'orange';
